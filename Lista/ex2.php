@@ -13,11 +13,31 @@
         <pre>
         <?php
 
-        // função percorre um array e imprime quais as chaves que mais aparecem
+        // – Escreva uma função que encontre o elemento que aparece mais vezes em um array, exemplo:
+        
         function elementThatAppearsMost($array)
         {
-            // loop para contar o número de elementos de uma variável, e adicionar em outra com os dados necessarios
-            // Poderia ser feito utilizando array_count_value(array) porem preferi construir do 0 para exercitar a logica 
+            $arrayData = array_count_values($array);
+            //loop compara o value atual com highestValue para decidir qual o maior e armazenar a key, se forem iguais armazena as duas keys, assim é possivel descobrir quais os elementos com maior valor.
+            $highestValue = 0;
+            $highestKey = array(null);
+            foreach ($arrayData as $key => $value) {
+                if ($value > $highestValue) {
+                    $highestKey = [];
+                    $highestValue = $value;
+                    array_push($highestKey, $key);
+                } elseif ($value === $highestValue) {
+                    array_push($highestKey, $key);
+                }
+            }
+            return $highestKey;
+        }
+
+
+
+        function elementThatAppearsMost1($array)
+        {
+            // loop para contar o número de elementos de uma variável, e adicionar em outra com os dados necessarios do 0 para exercitar a logica 
             $arrayData = array();
             for ($i = 0; $i < count($array); ++$i) {
                 if (key_exists($array[$i], $arrayData)) {

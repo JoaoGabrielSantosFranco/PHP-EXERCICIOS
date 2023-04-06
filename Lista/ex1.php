@@ -12,11 +12,13 @@
     <h1>
         <pre>
         <?php
-        //treats the array, even if the keys are not sequential it is still able to reverse the values
+        //Escreva uma função que coloque todos os zeros de um array no final,
+
+    
         function putTheZerosAtTheEnd($array)
         {
             for ($i = 0; $i < count($array); $i++) {
-                if ($array[$i] == 0) {
+                if ($array[$i] === 0) {
                     array_push($array, $array[$i]);
                     unset($array[$i]);
                 }
@@ -34,5 +36,3 @@
 </body>
 
 </html>
-
-

@@ -12,6 +12,9 @@
     <h1>
         <pre>
         <?php
+        // Escreva uma função que inverta as posições dos elementos dentro de um array. 
+
+
         function invertArray($array)
         {
             $first = 0;
@@ -26,6 +29,9 @@
             return $array;
         }
 
+
+
+        
         $array = array(1, 2, 3, 4, 5, 99);
         echo "Entrada";
         echo json_encode($array);

@@ -12,9 +12,11 @@
     <h1>
         <pre>
         <?php
+        // Crie uma função que encontre o elemento N que, somado a outro elemento N ou K dentro de um
+        // array, resulte na soma 6 Não deve ser utilizado loops para resolver esse exercício.
+        
         function findTheElement(array $array, array $arrayResults = [], int $index = 0)
         {
-
             $array = array_values($array);
             sort($array);
 
