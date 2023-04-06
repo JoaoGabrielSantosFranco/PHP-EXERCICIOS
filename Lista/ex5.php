@@ -26,9 +26,8 @@
             $input = str_split($input);
 
             $reverse = array_reverse($input);
-            return ($input === $reverse) ? true : false;
+            return ($input === $reverse) ;
         }
-
 
 
         function palindrome2($input)
